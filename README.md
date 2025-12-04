@@ -46,3 +46,25 @@ python3 gui_trip_planner.py
 ```
 
 La ventana permite introducir las fechas de inicio y fin en formato `YYYY-MM-DD` y muestra un plan sugerido en un cuadro de texto. La paleta de colores está pensada para una estética de viaje (azul de fondo, texto blanco y acentos en amarillo).
+
+Selector de fecha opcional
+-------------------------
+La GUI soporta selectores gráficos de fecha si instalas la dependencia `tkcalendar`. Si no la tienes, el programa usa campos de texto como antes.
+
+Instalación (opcional):
+
+```bash
+pip3 install tkcalendar
+```
+
+Enlaces a Google Maps por actividad
+-----------------------------------
+Al generar el plan y especificar un `Destino / Ciudad`, cada actividad aparece como un botón. Al pulsarlo se abrirá Google Maps con una búsqueda focalizada en la ciudad (p. ej. "cafés in Paris").
+
+También hay mapeos especiales para combinaciones ciudad+actividad (por ejemplo, `Astana + Monumentos` → `Baiterek`). Si quieres destinos concretos adicionales, puedo ampliarlos a una lista más extensa o cargar un archivo JSON con mapeos.
+
+Enlaces y ubicación
+-------------------
+Ahora la GUI pide también la **ubicación / ciudad** del viaje. Cada actividad del itinerario aparece como un botón; al pulsarlo se abre Google Maps buscando esa actividad en la ciudad indicada (por ejemplo "cafés in Paris").
+
+Además hay algunos mapeos específicos para lugares conocidos (p. ej. si pones "Astana" y el itinerario muestra "Monumentos" el botón te llevará a "Baiterek, Astana").
